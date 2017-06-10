@@ -1,13 +1,13 @@
 [gd_scene load_steps=16 format=1]
 
 [ext_resource path="res://bg.gd" type="Script" id=1]
-[ext_resource path="res://body.png" type="Texture" id=2]
-[ext_resource path="res://armpiece.png" type="Texture" id=3]
+[ext_resource path="res://Images/body.png" type="Texture" id=2]
+[ext_resource path="res://Images/armpiece.png" type="Texture" id=3]
 [ext_resource path="res://main.tres" type="Animation" id=4]
-[ext_resource path="res://knife.tscn" type="PackedScene" id=5]
-[ext_resource path="res://floor.png" type="Texture" id=6]
+[ext_resource path="res://Images/knife.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Images/floor.png" type="Texture" id=6]
 [ext_resource path="res://wallScript.gd" type="Script" id=7]
-[ext_resource path="res://wall.png" type="Texture" id=8]
+[ext_resource path="res://Images/wall.png" type="Texture" id=8]
 
 [sub_resource type="Animation" id=1]
 
@@ -391,5 +391,3 @@ _update_shape_index = 0
 transform/pos = Vector2( 1.76569, -0.0129089 )
 transform/scale = Vector2( 0.390088, 0.41983 )
 texture = ExtResource( 8 )
-
-
