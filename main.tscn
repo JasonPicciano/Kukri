@@ -1,0 +1,395 @@
+[gd_scene load_steps=16 format=1]
+
+[ext_resource path="res://bg.gd" type="Script" id=1]
+[ext_resource path="res://body.png" type="Texture" id=2]
+[ext_resource path="res://armpiece.png" type="Texture" id=3]
+[ext_resource path="res://main.tres" type="Animation" id=4]
+[ext_resource path="res://knife.tscn" type="PackedScene" id=5]
+[ext_resource path="res://floor.png" type="Texture" id=6]
+[ext_resource path="res://wallScript.gd" type="Script" id=7]
+[ext_resource path="res://wall.png" type="Texture" id=8]
+
+[sub_resource type="Animation" id=1]
+
+resource/name = "upperArmSwing"
+length = 1.5
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("body/armL:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0, 0.3, 0.6, 0.8, 1, 1.2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ) ] }
+tracks/1/type = "value"
+tracks/1/path = NodePath("body/armL:transform/rot")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 0, 0.3, 0.6, 0.8, 1, 1.2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ 0.200103, 95.1811, 163.869, 118.724, 50.4867, -0.729141 ] }
+tracks/2/type = "value"
+tracks/2/path = NodePath("body:transform/pos")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ Vector2( 91.218, 218.208 ) ] }
+tracks/3/type = "value"
+tracks/3/path = NodePath("body:transform/rot")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ 0.0 ] }
+tracks/4/type = "value"
+tracks/4/path = NodePath("body/armL/forearmL:transform/pos")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = { "times":FloatArray( 0, 0.3, 0.6, 0.8, 1, 1.2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ) ] }
+tracks/5/type = "value"
+tracks/5/path = NodePath("body/armL/forearmL:transform/rot")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = { "times":FloatArray( 0, 0.3, 0.6, 0.8, 1, 1.2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ -0.649599, 15.9273, 103.4, 28.0772, -5.32866, -0.0728995 ] }
+tracks/6/type = "method"
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = { "times":FloatArray( 0.2 ), "transitions":FloatArray( 1 ), "values":[ { "args":[  ], "method":"ReadyRelease" } ] }
+tracks/7/type = "value"
+tracks/7/path = NodePath("knife:transform/pos")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = { "times":FloatArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 121.691, 468.821 ), Vector2( 315.673, 425.85 ), Vector2( 433.186, 308.601 ), Vector2( 441.146, 168.686 ), Vector2( 308.939, 37.7749 ), Vector2( 104.072, 21.7127 ), Vector2( -27.9891, 124.127 ), Vector2( 116.327, 16.3258 ), Vector2( 353.951, 50.7884 ), Vector2( 450.911, 223.459 ), Vector2( 370.258, 389.582 ), Vector2( 264.069, 450.856 ), Vector2( 127.8, 472.536 ), Vector2( 125.764, 471.298 ) ] }
+tracks/8/type = "value"
+tracks/8/path = NodePath("knife:transform/rot")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = { "times":FloatArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ -141.888, -88.3535, -56.6362, -31.5103, 24.437, 78.2473, 129.091, 89.9078, 14.2264, -37.2854, -74.8875, -95.5809, -130.447, -130.62 ] }
+tracks/9/type = "value"
+tracks/9/path = NodePath("knife:transform/scale")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ Vector2( 0.421131, 0.503475 ) ] }
+
+[sub_resource type="Animation" id=2]
+
+resource/name = "upperArmSwing"
+length = 1.5
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("body/armL:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0, 0.3, 0.6, 0.8, 1, 1.2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ) ] }
+tracks/1/type = "value"
+tracks/1/path = NodePath("body/armL:transform/rot")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 0, 0.3, 0.6, 0.8, 1, 1.2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ 0.200103, 95.1811, 163.869, 118.724, 50.4867, -0.729141 ] }
+tracks/2/type = "value"
+tracks/2/path = NodePath("body:transform/pos")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ Vector2( 91.218, 218.208 ) ] }
+tracks/3/type = "value"
+tracks/3/path = NodePath("body:transform/rot")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ 0.0 ] }
+tracks/4/type = "value"
+tracks/4/path = NodePath("body/armL/forearmL:transform/pos")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = { "times":FloatArray( 0, 0.3, 0.6, 0.8, 1, 1.2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ) ] }
+tracks/5/type = "value"
+tracks/5/path = NodePath("body/armL/forearmL:transform/rot")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = { "times":FloatArray( 0, 0.3, 0.6, 0.8, 1, 1.2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ -0.649599, 15.9273, 103.4, 28.0772, -5.32866, -0.0728995 ] }
+tracks/6/type = "method"
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = { "times":FloatArray( 0.2 ), "transitions":FloatArray( 1 ), "values":[ { "args":[  ], "method":"ReadyRelease" } ] }
+
+[sub_resource type="Animation" id=3]
+
+resource/name = "upperArmSwing"
+length = 1.5
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("body/armL:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0, 0.3, 0.6, 0.8, 1, 1.2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ) ] }
+tracks/1/type = "value"
+tracks/1/path = NodePath("body/armL:transform/rot")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 0, 0.3, 0.6, 0.8, 1, 1.2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ 0.200103, 95.1811, 163.869, 118.724, 50.4867, -0.729141 ] }
+tracks/2/type = "value"
+tracks/2/path = NodePath("body:transform/pos")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ Vector2( 91.218, 218.208 ) ] }
+tracks/3/type = "value"
+tracks/3/path = NodePath("body:transform/rot")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ 0.0 ] }
+tracks/4/type = "value"
+tracks/4/path = NodePath("body/armL/forearmL:transform/pos")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = { "times":FloatArray( 0, 0.3, 0.6, 0.8, 1, 1.2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ) ] }
+tracks/5/type = "value"
+tracks/5/path = NodePath("body/armL/forearmL:transform/rot")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = { "times":FloatArray( 0, 0.3, 0.6, 0.8, 1, 1.2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ -0.649599, 15.9273, 103.4, 28.0772, -5.32866, -0.0728995 ] }
+tracks/6/type = "method"
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = { "times":FloatArray( 0.2 ), "transitions":FloatArray( 1 ), "values":[ { "args":[  ], "method":"ReadyRelease" } ] }
+
+[sub_resource type="Animation" id=4]
+
+resource/name = "upperArmSwing"
+length = 1.5
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("body/armL:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0, 0.3, 0.6, 0.8, 1, 1.2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ) ] }
+tracks/1/type = "value"
+tracks/1/path = NodePath("body/armL:transform/rot")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 0, 0.3, 0.6, 0.8, 1, 1.2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ 0.200103, 95.1811, 163.869, 118.724, 50.4867, -0.729141 ] }
+tracks/2/type = "value"
+tracks/2/path = NodePath("body:transform/pos")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ Vector2( 91.218, 218.208 ) ] }
+tracks/3/type = "value"
+tracks/3/path = NodePath("body:transform/rot")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ 0.0 ] }
+tracks/4/type = "value"
+tracks/4/path = NodePath("body/armL/forearmL:transform/pos")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = { "times":FloatArray( 0, 0.3, 0.6, 0.8, 1, 1.2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ) ] }
+tracks/5/type = "value"
+tracks/5/path = NodePath("body/armL/forearmL:transform/rot")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = { "times":FloatArray( 0, 0.3, 0.6, 0.8, 1, 1.2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ -0.649599, 15.9273, 103.4, 28.0772, -5.32866, -0.0728995 ] }
+tracks/6/type = "method"
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = { "times":FloatArray( 0.2 ), "transitions":FloatArray( 1 ), "values":[ { "args":[  ], "method":"ReadyRelease" } ] }
+
+[sub_resource type="Animation" id=5]
+
+resource/name = "upperArmSwing"
+length = 1.5
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("body/armL:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0, 0.3, 0.6, 0.8, 1, 1.2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ) ] }
+tracks/1/type = "value"
+tracks/1/path = NodePath("body/armL:transform/rot")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 0, 0.3, 0.6, 0.8, 1, 1.2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ 0.200103, 95.1811, 163.869, 118.724, 50.4867, -0.729141 ] }
+tracks/2/type = "value"
+tracks/2/path = NodePath("body:transform/pos")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ Vector2( 91.218, 218.208 ) ] }
+tracks/3/type = "value"
+tracks/3/path = NodePath("body:transform/rot")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ 0.0 ] }
+tracks/4/type = "value"
+tracks/4/path = NodePath("body/armL/forearmL:transform/pos")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = { "times":FloatArray( 0, 0.3, 0.6, 0.8, 1, 1.2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ) ] }
+tracks/5/type = "value"
+tracks/5/path = NodePath("body/armL/forearmL:transform/rot")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = { "times":FloatArray( 0, 0.3, 0.6, 0.8, 1, 1.2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ -0.649599, 15.9273, 103.4, 28.0772, -5.32866, -0.0728995 ] }
+tracks/6/type = "method"
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = { "times":FloatArray( 0.2 ), "transitions":FloatArray( 1 ), "values":[ { "args":[  ], "method":"ReadyRelease" } ] }
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 542.315, 3.63757 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 287.373 )
+
+[node name="main" type="Node"]
+
+script/script = ExtResource( 1 )
+
+[node name="body" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 91.218, 218.208 )
+transform/scale = Vector2( 0.402401, 0.301834 )
+texture = ExtResource( 2 )
+__meta__ = { "_edit_ik_":true }
+
+[node name="armL" type="Sprite" parent="body"]
+
+transform/pos = Vector2( 109.803, 20.9662 )
+transform/rot = 3.1464
+transform/scale = Vector2( 0.834836, 0.843257 )
+texture = ExtResource( 3 )
+offset = Vector2( 0.89702, 173.527 )
+__meta__ = { "_edit_bone_":true, "_edit_ik_":true }
+
+[node name="forearmL" type="Sprite" parent="body/armL"]
+
+transform/pos = Vector2( 0.548309, 349.209 )
+transform/rot = -0.135386
+transform/scale = Vector2( 0.999999, 1 )
+texture = ExtResource( 3 )
+offset = Vector2( 1.60574, 185.612 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="hand" type="Sprite" parent="body/armL/forearmL"]
+
+visibility/light_mask = 2
+transform/pos = Vector2( 3.50571, 404.55 )
+transform/rot = -10.6296
+transform/scale = Vector2( 0.825748, 0.24661 )
+texture = ExtResource( 3 )
+offset = Vector2( -0.875575, 161.828 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/upperArmSwing = SubResource( 1 )
+"anims/upperArmSwing (copy)" = SubResource( 2 )
+"anims/upperArmSwing (copy) (copy)" = SubResource( 3 )
+"anims/upperArmSwing (copy) (copy) (copy)" = SubResource( 4 )
+"anims/upperArmSwing (copy) (copy) (copy) (copy)" = SubResource( 5 )
+"anims/upperArmSwing (copy) (copy) (copy) (copy) (copy)" = ExtResource( 4 )
+next/upperArmSwing = ""
+"next/upperArmSwing (copy)" = ""
+"next/upperArmSwing (copy) (copy)" = ""
+"next/upperArmSwing (copy) (copy) (copy)" = ""
+"next/upperArmSwing (copy) (copy) (copy) (copy)" = ""
+"next/upperArmSwing (copy) (copy) (copy) (copy) (copy)" = ""
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="background" type="Polygon2D" parent="."]
+
+visibility/light_mask = 2
+transform/pos = Vector2( 1.36039, -1.36037 )
+z/z = -3
+polygon = Vector2Array( -13.6879, -10.5897, -13.6879, 617.903, 1055.57, 617.903, 1056.93, -10.5897 )
+uv = Vector2Array(  )
+color = Color( 0.636719, 0.636719, 0.636719, 1 )
+vertex_colors = ColorArray(  )
+offset = Vector2( 0, 0 )
+texture/texture = null
+texture/offset = Vector2( 0, 0 )
+texture/scale = Vector2( 1, 1 )
+texture/rotation = 0.0
+invert/enable = false
+invert/border = 100.0
+
+[node name="knife" parent="." instance=ExtResource( 5 )]
+
+[node name="floor" type="StaticBody2D" parent="."]
+
+editor/display_folded = true
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 524.244, 633.513 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="floorSprite" type="Sprite" parent="floor"]
+
+transform/pos = Vector2( 513.262, 601.799 )
+transform/scale = Vector2( 0.390088, 0.914227 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
+
+transform/pos = Vector2( 524.244, 633.513 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="wall" type="RigidBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 1013.69, 287.627 )
+input/pickable = false
+shapes/0/shape = SubResource( 7 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 14.9641, -2.72076 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 200.0
+friction = 0.0
+bounce = 1.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 1
+contact_monitor = true
+sleeping = false
+can_sleep = false
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+script/script = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
+
+transform/pos = Vector2( 14.9641, -2.72076 )
+shape = SubResource( 7 )
+trigger = false
+_update_shape_index = 0
+
+[node name="wallSprite1" type="Sprite" parent="wall"]
+
+transform/pos = Vector2( 1.76569, -0.0129089 )
+transform/scale = Vector2( 0.390088, 0.41983 )
+texture = ExtResource( 8 )
+
+

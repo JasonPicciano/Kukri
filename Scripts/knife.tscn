@@ -1,0 +1,89 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://Knife.gd" type="Script" id=1]
+[ext_resource path="res://KnifeSprites.png" type="Texture" id=2]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 97.5726, -68.3198, 116.779, -77.9588, 111.401, -45.1861, 82.9759, -19.4821, -26.1155, 41.565, -38.4074, 16.5036 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -90.6953, 71.2089, -103.025, 55.764, -38.5395, 16.1314, -30.2946, 35.2287 )
+
+[node name="knife" type="RigidBody2D"]
+
+transform/pos = Vector2( 139.743, 464.822 )
+transform/rot = -136.907
+transform/scale = Vector2( 0.421131, 0.503475 )
+z/z = -1
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 2.91516, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 0.1
+friction = 1.0
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 1
+contact_monitor = true
+sleeping = false
+can_sleep = false
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+script/script = ExtResource( 1 )
+
+[node name="knifeSprite" type="Sprite" parent="."]
+
+transform/scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 2 )
+
+[node name="knifeCollider" type="CollisionPolygon2D" parent="."]
+
+transform/pos = Vector2( 2.91516, 0 )
+build_mode = 0
+polygon = Vector2Array( -38.4074, 16.5036, -26.1155, 41.565, 82.9759, -19.4821, 111.401, -45.1861, 116.779, -77.9588, 97.5726, -68.3198 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="hilt" type="RigidBody2D" parent="."]
+
+input/pickable = false
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 0.1
+friction = 1.0
+bounce = 1.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="hilt"]
+
+build_mode = 0
+polygon = Vector2Array( -30.2946, 35.2287, -38.5395, 16.1314, -103.025, 55.764, -90.6953, 71.2089 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+

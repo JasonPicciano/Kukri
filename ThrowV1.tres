@@ -1,0 +1,39 @@
+[gd_resource type="Animation" format=1]
+
+[resource]
+
+resource/name = "upperArmSwing"
+length = 2.1
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("body/armL/forearmL/boneDisplay:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0, 0.6, 1.1, 1.4, 1.7, 2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( -14.6039, 388.378 ), Vector2( -14.6027, 388.377 ), Vector2( -14.6025, 388.376 ), Vector2( -14.6023, 388.375 ), Vector2( -14.6027, 388.375 ), Vector2( -14.6027, 388.373 ) ] }
+tracks/1/type = "value"
+tracks/1/path = NodePath("body/armL/forearmL/boneDisplay:transform/rot")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 0, 0.6, 1.1, 1.4, 1.7, 2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ 0.976245, -98.9163, 86.5491, -178.514, -82.1928, 0.243439 ] }
+tracks/2/type = "value"
+tracks/2/path = NodePath("body/armL/forearmL:transform/pos")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = { "times":FloatArray( 0, 0.6, 1.1, 1.4, 1.7, 2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 0.548187, 349.211 ), Vector2( 0.548187, 349.211 ), Vector2( 0.548187, 349.211 ), Vector2( 0.548187, 349.211 ), Vector2( 0.548187, 349.211 ), Vector2( 0.548187, 349.211 ) ] }
+tracks/3/type = "value"
+tracks/3/path = NodePath("body/armL/forearmL:transform/rot")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = { "times":FloatArray( 0, 0.6, 1.1, 1.4, 1.7, 2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ -0.583991, 10.7109, 101.399, 64.5133, -7.51992, 1.78695 ] }
+tracks/4/type = "value"
+tracks/4/path = NodePath("body/armL:transform/pos")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = { "times":FloatArray( 0, 0.6, 1.1, 1.4, 1.7, 2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ) ] }
+tracks/5/type = "value"
+tracks/5/path = NodePath("body/armL:transform/rot")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = { "times":FloatArray( 0, 0.6, 1.1, 1.4, 1.7, 2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ -0.388335, 88.1873, 172.13, 114.215, 89.7098, -2.01013 ] }
+

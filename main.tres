@@ -1,0 +1,54 @@
+[gd_resource type="Animation" format=1]
+
+[resource]
+
+resource/name = "upperArmSwing"
+length = 1.5
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("body/armL:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0, 0.3, 0.6, 0.8, 1, 1.2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ), Vector2( 109.803, 20.9662 ) ] }
+tracks/1/type = "value"
+tracks/1/path = NodePath("body/armL:transform/rot")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 0, 0.3, 0.6, 0.8, 1, 1.2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ 0.200103, 95.1811, 163.869, 118.724, 50.4867, -0.729141 ] }
+tracks/2/type = "value"
+tracks/2/path = NodePath("body:transform/pos")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ Vector2( 91.218, 218.208 ) ] }
+tracks/3/type = "value"
+tracks/3/path = NodePath("body:transform/rot")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ 0.0 ] }
+tracks/4/type = "value"
+tracks/4/path = NodePath("body/armL/forearmL:transform/pos")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = { "times":FloatArray( 0, 0.3, 0.6, 0.8, 1, 1.2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ), Vector2( 0.548309, 349.209 ) ] }
+tracks/5/type = "value"
+tracks/5/path = NodePath("body/armL/forearmL:transform/rot")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = { "times":FloatArray( 0, 0.3, 0.6, 0.8, 1, 1.2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ -0.649599, 15.9273, 103.4, 28.0772, -5.32866, -0.0728995 ] }
+tracks/6/type = "method"
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = { "times":FloatArray( 0.2 ), "transitions":FloatArray( 1 ), "values":[ { "args":[  ], "method":"ReadyRelease" } ] }
+tracks/7/type = "value"
+tracks/7/path = NodePath("knife:transform/pos")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = { "times":FloatArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 121.691, 468.821 ), Vector2( 315.673, 425.85 ), Vector2( 433.186, 308.601 ), Vector2( 441.146, 168.686 ), Vector2( 308.939, 37.7749 ), Vector2( 104.072, 21.7127 ), Vector2( -27.9891, 124.127 ), Vector2( 116.327, 16.3258 ), Vector2( 353.951, 50.7884 ), Vector2( 450.911, 223.459 ), Vector2( 370.258, 389.582 ), Vector2( 264.069, 450.856 ), Vector2( 127.8, 472.536 ), Vector2( 125.764, 471.298 ) ] }
+tracks/8/type = "value"
+tracks/8/path = NodePath("knife:transform/rot")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = { "times":FloatArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ -141.888, -88.3535, -56.6362, -31.5103, 24.437, 78.2473, 129.091, 89.9078, 14.2264, -37.2854, -74.8875, -95.5809, -130.447, -130.62 ] }
+
