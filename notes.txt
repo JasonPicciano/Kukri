@@ -1,0 +1,20 @@
+Notes:
+
+
+
+
+
+
+
+
+
+
+Project Plan:
+-Refactor Code post file organization change: Sun 6/25
+-Find correct object configuration for collision detection: 25-30th
+-Reset code: testing, manual, automatic, keep old bodies on screen: 7/1-7/8
+-Counter code, drops oldest body, losing code: 7/9-715
+-Redesign, Main Menu, reanimate 7/29
+-Saving code, app closing, exporting code 7/30-7/4
+-Testing on multiple devices, Screen sizes, reanimation 8/5-8/30
+-Publish in september.
