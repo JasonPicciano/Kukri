@@ -8,8 +8,23 @@ var hand
 var knife
 var newKnife
 
+#Ready Function
+#This Function is called when the scene is first loaded. 
+#The main thing to focus on here is the global variable (global means all functions and all scripts can use it) "Swing"
+#Swing tells many parts of the game whether we are at:
+#idle
+#starting the swing animation
+#have hit a section of the swing
+#animation and are listening for the release hit
+#the release event has fired
+#Knife has hit the wall or has left the screen and needs to be reset
+
+
+
 func _ready():
 	print("main script is called")
+	
+	
 	newKnife = load("res://Scripts/knife.tscn")
 
 	self.set_process(true)
